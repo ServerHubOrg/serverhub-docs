@@ -1,0 +1,25 @@
+{
+  "name": "serverhub-docs",
+  "version": "1.0.0",
+  "description": "server-hub doc site generator based on vuepress",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ServerHubOrg/serverhub-docs.git"
+  },
+  "keywords": ["doc"],
+  "author": "donley828",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ServerHubOrg/serverhub-docs/issues"
+  },
+  "homepage": "https://github.com/ServerHubOrg/serverhub-docs#readme",
+  "devDependencies": {
+    "vuepress": "^0.8.4"
+  }
+}
