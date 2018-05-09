@@ -1,4 +1,5 @@
 module.exports = {
+  base: "/serverhub-docs/", //deploy to serverhub-docs
   dest: "dist",
   locales: {
     "/": {
