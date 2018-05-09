@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/serverhub-compact.png
 actionText: Getting Started →
-actionLink: /guide/
+actionLink: /tutorial/
 features:
 - title: 
   details: Lightweight and Fast.

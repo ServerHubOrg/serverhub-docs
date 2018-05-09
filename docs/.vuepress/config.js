@@ -31,23 +31,31 @@ module.exports = {
         nav: [
           {
             text: "Tutorial",
-            link: "/guide/"
+            link: "/tutorial/"
           },
           {
             text: "Documention",
-            link: "/api/"
+            link: "/documention/"
           }
         ],
         sidebar: {
-          "/guide/": [
+          "/tutorial/": [
             {
-              title: "Guide",
+              title: "Tutorial",
+              collapsable: false,
+              children: ["", "getting-started", "Instance.Run()", "hello-world"]
+            }
+          ],
+          "/documention/": [
+            {
+              title: "Documention",
               collapsable: false,
               children: [
                 "",
-                "getting-started",
-                "Instance.Run()",
-                "hello-world"
+                "run-module-method",
+                "controller",
+                "route",
+                "plugin"
               ]
             }
           ]
