@@ -60,4 +60,4 @@ Now, try node `app.js`, ServerHub will start your website at port 926 (my best f
 
 ## More about that
 
-Please follow [this link]() to dive into configuration parameter of `instance.Run()` method.
+Please follow [this link](/documention/run-module-method.html) to dive into configuration parameter of `instance.Run()` method.

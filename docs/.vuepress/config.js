@@ -68,15 +68,36 @@ module.exports = {
         editLinkText: "在 Github 上编辑此页",
         nav: [
           {
-            text: "指南",
-            link: "/zh/guide/"
+            text: "教程",
+            link: "/zh/tutorial/"
           },
           {
             text: "文档",
-            link: "/zh/api/"
+            link: "/zh/documention/"
           }
         ],
-        sidebar: {}
+        sidebar: {
+          "/zh/tutorial/": [
+            {
+              title: "教程",
+              collapsable: false,
+              children: ["", "getting-started", "Instance.Run()", "hello-world"]
+            }
+          ],
+          "/zh/documention/": [
+            {
+              title: "文档",
+              collapsable: false,
+              children: [
+                "",
+                "run-module-method",
+                "controller",
+                "route",
+                "plugin"
+              ]
+            }
+          ]
+        }
       }
     }
   }
