@@ -1,10 +1,10 @@
 module.exports = {
-  base: "/serverhub-docs/", //deploy to serverhub-docs
+  base: "/", //deploy to serverhub-docs
   dest: "dist",
   locales: {
     "/": {
       lang: "en-US",
-      title: "ServerHub MVC",
+      title: "ServerHub Open Source Project",
       description: "Fast and reliable MVC framework for Nodejs"
     },
     "/zh/": {
@@ -14,10 +14,20 @@ module.exports = {
     }
   },
   head: [
-    ["link", { rel: "icon", href: "/favicon.png" }],
-    ["link", { rel: "manifest", href: "/manifest.json" }]
+    ["link", {
+      rel: "icon",
+      href: "/favicon.png"
+    }],
+    ["link", {
+      rel: "manifest",
+      href: "/manifest.json"
+    }],
+    ["link", {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Mono"
+    }]
   ],
-  serviceWorker: true,
+  serviceWorker: false,
   themeConfig: {
     repo: "ServerHubOrg/serverhub-mvc",
     docsRepo: "ServerHubOrg/serverhub-docs",
@@ -29,74 +39,90 @@ module.exports = {
         label: "English",
         selectText: "Languages",
         editLinkText: "Edit this page on Github",
-        nav: [
-          {
+        nav: [{
             text: "Tutorial",
             link: "/tutorial/"
           },
           {
             text: "Documention",
             link: "/documention/"
+          },
+          {
+            text: "Contribution",
+            link: "/contribution/"
           }
         ],
         sidebar: {
-          "/tutorial/": [
-            {
-              title: "Tutorial",
-              collapsable: false,
-              children: ["", "getting-started", "Instance.Run()", "hello-world"]
-            }
-          ],
-          "/documention/": [
-            {
-              title: "Documention",
-              collapsable: false,
-              children: [
-                "",
-                "run-module-method",
-                "controller",
-                "route",
-                "plugin"
-              ]
-            }
-          ]
+          "/tutorial/": [{
+            title: "Tutorial",
+            collapsable: false,
+            children: ["", "getting-started", "Instance.Run()", "hello-world"]
+          }],
+          "/documention/": [{
+            title: "Documention",
+            collapsable: false,
+            children: [
+              "",
+              "run-module-method",
+              "controller",
+              "route",
+              "plugin"
+            ]
+          }],
+          "/contribution": [{
+            title: "Contribution",
+            collapsable: false,
+            children: [
+              "",
+              "CLI & Templating",
+              "Documents"
+            ]
+          }]
         }
       },
       "/zh/": {
         label: "简体中文",
         selectText: "选择语言",
         editLinkText: "在 Github 上编辑此页",
-        nav: [
-          {
+        nav: [{
             text: "教程",
             link: "/zh/tutorial/"
           },
           {
             text: "文档",
             link: "/zh/documention/"
+          },
+          {
+            text: "贡献者",
+            link: "/zh/contribution/"
           }
         ],
         sidebar: {
-          "/zh/tutorial/": [
-            {
-              title: "教程",
-              collapsable: false,
-              children: ["", "getting-started", "Instance.Run()", "hello-world"]
-            }
-          ],
-          "/zh/documention/": [
-            {
-              title: "文档",
-              collapsable: false,
-              children: [
-                "",
-                "run-module-method",
-                "controller",
-                "route",
-                "plugin"
-              ]
-            }
-          ]
+          "/zh/tutorial/": [{
+            title: "教程",
+            collapsable: false,
+            children: ["", "getting-started", "Instance.Run()", "hello-world"]
+          }],
+          "/zh/documention/": [{
+            title: "文档",
+            collapsable: false,
+            children: [
+              "",
+              "run-module-method",
+              "controller",
+              "route",
+              "plugin"
+            ]
+          }],
+          "/contribution": [{
+            title: "项目贡献者",
+            collapsable: false,
+            children: [
+              "",
+              "CLI & 模板维护",
+              "文档"
+            ]
+          }]
         }
       }
     }

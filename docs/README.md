@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /assets/serverhub-compact.png
-actionText: Getting Started →
+actionText: Get Started
 actionLink: /tutorial/
 features:
 - title: 
@@ -10,5 +10,5 @@ features:
   details: Stable and Reliable.
 - title: 
   details: Extendable and Open Source.
-footer: MIT Licensed | Copyright © 2018-present Yang Zhongdong
+footer: MIT License | Copyright © 2018-present Zhongdong Yang
 ---

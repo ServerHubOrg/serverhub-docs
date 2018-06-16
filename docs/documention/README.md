@@ -17,7 +17,7 @@
 
 ## PLUGIN
 
-[Plugin]()
+[Plugin](./plugin.md)
 
 ---
 

@@ -12,7 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/ServerHubOrg/serverhub-docs.git"
   },
-  "keywords": ["doc"],
+  "keywords": [
+    "doc"
+  ],
   "author": "donley828",
   "license": "MIT",
   "bugs": {
