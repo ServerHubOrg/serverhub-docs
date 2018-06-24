@@ -148,7 +148,7 @@ export default {
     color lighten($textColor, 25%)
     display inline-block
     border 1px solid darken($borderColor, 10%)
-    border-radius 2rem
+    border-radius 4px
     font-size 0.9rem
     line-height 2rem
     padding 0 0.5rem 0 2rem
@@ -156,6 +156,7 @@ export default {
     transition all .2s ease
     background #fff url(./search.svg) 0.6rem 0.5rem no-repeat
     background-size 1rem
+    transition border-color ease-in-out 200ms
     &:focus
       cursor auto
       border-color $accentColor

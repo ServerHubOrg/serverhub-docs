@@ -1,4 +1,4 @@
-# ROUTE
+# Route
 
 Route is one of ServerHub's core features. With route, all HTTP request can be filtered and send to correct handlers. For example, `/index.html` might be a static webpage, but `/home/index` could be a controller URL. ServerHub's route system provide two ways to deal with it. One is called positive rules and the other one is called negative rules.
 
@@ -14,23 +14,23 @@ Prefix `api` is a normal string. Every request that matches the rule should star
 
 Here we have some examples (assuming that you have home controller with index/info actions in your project):
 
-* Valid request path
+```
+Valid request path:
+  /api/home/index
+  /api/home/info/
+  /api/home/index/5
+  /api/home/index/5?name=xu_wangzhe
+  /api/home/index/?name=xu_wangzhe
 
-  * /api/home/index
-  * /api/home/info/
-  * /api/home/index/5
-  * /api/home/index/5?name=xu_wangzhe
-  * /api/home/index/?name=xu_wangzhe
+Invalid request path:
+  /home/index
+  /api/home/index.html
+  /api/home/5
+  /api/index/5?name=xu_wangzhe
+  /api/home-foo/index/?name=xu_wangzhe
+```
 
-* Invalid request path
-
-  * /home/index
-  * /api/home/index.html
-  * /api/home/5
-  * /api/index/5?name=xu_wangzhe
-  * /api/home-foo/index/?name=xu_wangzhe
-
-  Request paths that does not match the route rule will be treated as requests to static resources.
+Request paths that does not match the route rule will be treated as requests to static resources.
 
 But how to set positive rule? Look at this:
 
@@ -44,13 +44,13 @@ Pass this annoymous function as the second parameter of `instance.Run()` method.
 
 ## Negative rules
 
-**Negative rules are checked before positive rules**. If any request path matched any negative rule, it will immediately be treated as static resources.
+**Negative rules are checked ahead of any positive rules**. If any request path matched any negative rule, it will immediately be treated as static resources.
 
 Negative rules support **both** string rule definition and regular expressions. An array is used to contain all the rules needed.
 
 Here are three examples:
 
-* String rule example
+### String rule example
 
 ```js
 route.IgnoreRoute(["/language/all"]);
@@ -60,15 +60,15 @@ As you can see. The `language` controller may have `english` and `chinese` actio
 
 One thing that you should know about string negative route rule is: your rules should always start with '/'.
 
-* Regular expression example
+### Regular expression example
+What if want to ignore all routes that start with "no-route"? Should we write every possibilities? Of course, that is not possible. So we use the regular expression above to ignore all request with prefix "no-route" (upper-case or lower-case)
 
 ```js
 route.IgnoreRoute([/^\/no-route.*$/i]);
 ```
 
-What if want to ignore all routes that start with "no-route"? Should we write every possibilities? Of course, that is not possible. So we use the regular expression above to ignore all request with prefix "no-route" (upper-case or lower-case)
 
-* Multiple negative rules
+### Multiple negative rules
 
 ```js
 route.IgnoreRoute(["/language/all", /^\/no-route.*$/i]);

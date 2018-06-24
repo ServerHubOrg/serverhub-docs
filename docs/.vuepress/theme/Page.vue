@@ -14,14 +14,14 @@
     <div class="page-nav" v-if="prev || next">
       <p class="inner">
         <span v-if="prev" class="prev">
-          ← <router-link v-if="prev" class="prev" :to="prev.path">
+          <i class="material-icons">arrow_back</i> <router-link v-if="prev" class="prev" :to="prev.path">
             {{ prev.title || prev.path }}
           </router-link>
         </span>
         <span v-if="next" class="next">
           <router-link v-if="next" :to="next.path">
             {{ next.title || next.path }}
-          </router-link> →
+          </router-link> <i class="material-icons">arrow_forward</i>
         </span>
       </p>
     </div>
@@ -188,6 +188,12 @@ function find(page, items, offset) {
     border-top: 1px solid $borderColor;
     padding-top: 1rem;
     overflow: auto; // clear float
+
+    i {
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
   }
 
   .next {

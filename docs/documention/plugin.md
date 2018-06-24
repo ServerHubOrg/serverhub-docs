@@ -1,6 +1,6 @@
-# Plugin System Introduction
+# Plugin System
 
-::: warning
+::: tip TIP
 avaliable since v1.0.0-beta
 :::
 

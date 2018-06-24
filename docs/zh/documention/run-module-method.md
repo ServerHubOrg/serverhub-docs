@@ -16,7 +16,7 @@ sidebarDepth: 3
 
 与之前我们在 [Instance.Run()](</zh/tutorial/Instance.Run().html>) 一章中看到的不同，那个配置对象太复杂了。事实上，只有一个参数是必要的，那就是： `BaseDir`.
 
-BaseDir 是 服务器的根目录，它会被 ServerHub 应用程序引用于其生命周期的各个阶段。如果你的入口文件，比如 app.js，刚好位于你的服务器根目录，则只需将 `\_\_dirname` 传过去即可。
+BaseDir 是 服务器的根目录，它会被 ServerHub 应用程序引用于其生命周期的各个阶段。如果你的入口文件，比如 app.js，刚好位于你的服务器根目录，则只需将 `__dirname` 传过去即可。
 
 这就是能够让你的 ServerHub 应用正常工作的最基本配置了。
 

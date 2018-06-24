@@ -1,4 +1,4 @@
-# CONTROLLERS
+# Controllers
 
 Controllers are very important and extremely basic. Routed path will dispatch actions defined in each controller. In this article, we will discuss about controller composing and other essential parts you need to notice.
 
@@ -45,7 +45,7 @@ You are suggested to use **arrow functions** that accessible since ECMAScript 20
 
 Usage of these variables are avaliable at `doc/variables/{VariableName}.md`. Some variables that have primitive types like `string`, `number` etc. (as well as some reference to vanilla Node.js implementation) will not be doced, FYI.
 
-* `this.View` **_Function()_** Returns the corresponding model file.
+* `this.View()` **_Function_** Returns the corresponding model file.
 * `this.Runtime` **_Object_** Contains bunch of other runtime features.
 
   1.  `this.Runtime.DBProvider` **_Object_** A reference to initialized database provider instanced (default MySQL).
@@ -60,7 +60,7 @@ Usage of these variables are avaliable at `doc/variables/{VariableName}.md`. Som
       * `this.System.Hardware.TotalMemory` **_number_** Installed memory size (byte).
       * `this.System.Hardware.FreeMemory` **_number_** Free memory size (byte).
       * `this.System.Hardware.NetworkInterfaces` **_Object_** Returns interfaces that have been assigned a network address.
-  1.  `this.System.Die` **_Function(exit_code)_** Exit current ServerHub process.
+  1.  `this.System.Die(exit_code)` **_Function_** Exit current ServerHub process.
 
 ## Actions in Controller
 

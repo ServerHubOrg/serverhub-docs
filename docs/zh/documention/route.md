@@ -14,21 +14,21 @@ Route 是 ServerHub 的核心之一。有了路由，所有的 HTTP 请求都可
 
 下面举一些例子（假设你已经在项目写好了一个带有 index/info 方法的控制器 home）：
 
-* 能被匹配的请求：
+```
+能被匹配的请求：
+  /api/home/index
+  /api/home/info/
+  /api/home/index/5
+  /api/home/index/5?name=xu_wangzhe
+  /api/home/index/?name=xu_wangzhe
 
-      * /api/home/index
-      * /api/home/info/
-      * /api/home/index/5
-      * /api/home/index/5?name=xu_wangzhe
-      * /api/home/index/?name=xu_wangzhe
-
-* 不能被匹配的请求：
-
-      * /home/index
-      * /api/home/index.html
-      * /api/home/5
-      * /api/index/5?name=xu_wangzhe
-      * /api/home-foo/index/?name=xu_wangzhe
+不能被匹配的请求：
+  /home/index
+  /api/home/index.html
+  /api/home/5
+  /api/index/5?name=xu_wangzhe
+  /api/home-foo/index/?name=xu_wangzhe
+```
 
 如果请求的路径不能匹配这一路由规则，那么 ServerHub 会将其当作是对静态资源的请求，会触发 Cache 系统来加载、缓存。
 
@@ -42,7 +42,7 @@ route => {
 
 将这个匿名函数传入 `instance.Run()` 方法的第二参数即可。
 
-## Negative rules
+## 反路由规则
 
 **反路由规则永远会在正路由被检查之前先被执行！**如果任何请求匹配了反路由，则永远不会再进行正匹配，也就是会立即被作为静态资源请求被处理。
 
@@ -50,7 +50,7 @@ route => {
 
 下面给出几个例子：
 
-* 字符串规则的例子
+### 字符串规则的例子
 
 ```js
 route.IgnoreRoute(["/language/all"]);
@@ -60,15 +60,15 @@ route.IgnoreRoute(["/language/all"]);
 
 有一点需要注意的是，这一类规则必须要用“/”作为开头，否则请使用正则表达式。
 
-* 正则表达式案例
+### 正则表达式案例
+
+假如你想要完全屏蔽所有以“no-route”开头的请求怎么办？难道要把所有可能都写出来吗？显然是不现实的。所以我们直接将正则表达式传入该方法，进而将所有以“no-route”为前缀（无论大小写）的请求都屏蔽。
 
 ```js
 route.IgnoreRoute([/^\/no-route.*$/i]);
 ```
 
-假如你想要完全屏蔽所有以“no-route”开头的请求怎么办？难道要把所有可能都写出来吗？显然是不现实的。所以我们直接将正则表达式传入该方法，进而将所有以“no-route”为前缀（无论大小写）的请求都屏蔽。
-
-* 混合规则
+### 混合规则
 
 ```js
 route.IgnoreRoute(["/language/all", /^\/no-route.*$/i]);

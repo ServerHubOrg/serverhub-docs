@@ -1,8 +1,4 @@
-# 介绍
-
-::: tip 提示  
-基于 serverhub-mvc v1.3.1 更新 
-:::
+# 关于
 
 **ServerHub** 由一个 Node.js 框架和用于目录管理的辅助 CLI 工具组成。其中 ServerHub MVC [npm/serverhub-mvc](https://www.npmjs.com/package/serverhub-mvc) 是一个运行于 **Node.js** 的高效且简单的 **MVC Web** 服务器框架。
 
@@ -13,6 +9,8 @@
 * 开源并且可拓展
 
 现在，我们开通了邮件订阅服务，你可以用自己的电子邮箱地址来 [订阅](mailto:serverhub.contact@gmail.com?subject=serverhub-news-52b3f7de&body=hello,%20ServerHub!) 本服务。订阅过程至多需要 5 分钟来完成。
+
+ServerHub 项目献给我一生的挚友 **昌睿**。
 
 # 感谢
 

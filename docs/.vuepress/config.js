@@ -4,12 +4,12 @@ module.exports = {
   locales: {
     "/": {
       lang: "en-US",
-      title: "ServerHub Open Source Project",
+      title: "ServerHub References",
       description: "Fast and reliable MVC framework for Nodejs"
     },
     "/zh/": {
       lang: "zh-CN",
-      title: "ServerHub MVC",
+      title: "ServerHub 参考",
       description: "快速可靠的 Nodejs MVC 框架"
     }
   },
@@ -24,8 +24,17 @@ module.exports = {
     }],
     ["link", {
       rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Roboto+Mono"
-    }]
+      href: "https://fonts.googleapis.com/css?family=Roboto:500,400,300|Roboto+Mono"
+    }],
+    ['link', {
+      rel: 'stylesheet',
+      href: "//fonts.googleapis.com/earlyaccess/notosansscsliced.css"
+    }], [
+      'link', {
+        rel: 'stylesheet',
+        href: "https://fonts.googleapis.com/icon?family=Material+Icons"
+      }
+    ]
   ],
   serviceWorker: false,
   themeConfig: {
@@ -40,23 +49,23 @@ module.exports = {
         selectText: "Languages",
         editLinkText: "Edit this page on Github",
         nav: [{
-            text: "Tutorial",
-            link: "/tutorial/"
-          },
-          {
-            text: "Documention",
-            link: "/documention/"
-          },
-          {
-            text: "Contribution",
-            link: "/contribution/"
-          }
+          text: "Tutorial",
+          link: "/tutorial/"
+        },
+        {
+          text: "Documention",
+          link: "/documention/"
+        },
+        {
+          text: "About",
+          link: "/about/"
+        }
         ],
         sidebar: {
           "/tutorial/": [{
             title: "Tutorial",
             collapsable: false,
-            children: ["", "getting-started", "Instance.Run()", "hello-world"]
+            children: ["", "hello-world", "getting-started", "Instance.Run()"]
           }],
           "/documention/": [{
             title: "Documention",
@@ -69,13 +78,11 @@ module.exports = {
               "plugin"
             ]
           }],
-          "/contribution": [{
-            title: "Contribution",
+          "/about/": [{
+            title: "About",
             collapsable: false,
             children: [
-              "",
-              "CLI & Templating",
-              "Documents"
+              "", 'contributors'
             ]
           }]
         }
@@ -85,23 +92,23 @@ module.exports = {
         selectText: "选择语言",
         editLinkText: "在 Github 上编辑此页",
         nav: [{
-            text: "教程",
-            link: "/zh/tutorial/"
-          },
-          {
-            text: "文档",
-            link: "/zh/documention/"
-          },
-          {
-            text: "贡献者",
-            link: "/zh/contribution/"
-          }
+          text: "教程",
+          link: "/zh/tutorial/"
+        },
+        {
+          text: "文档",
+          link: "/zh/documention/"
+        },
+        {
+          text: "关于",
+          link: "/zh/about/"
+        }
         ],
         sidebar: {
           "/zh/tutorial/": [{
             title: "教程",
             collapsable: false,
-            children: ["", "getting-started", "Instance.Run()", "hello-world"]
+            children: ["", "hello-world", "getting-started", "Instance.Run()"]
           }],
           "/zh/documention/": [{
             title: "文档",
@@ -114,13 +121,12 @@ module.exports = {
               "plugin"
             ]
           }],
-          "/contribution": [{
-            title: "项目贡献者",
+          "/zh/about/": [{
+            title: "关于",
             collapsable: false,
             children: [
               "",
-              "CLI & 模板维护",
-              "文档"
+              "contributors"
             ]
           }]
         }

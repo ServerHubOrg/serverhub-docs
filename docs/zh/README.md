@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /assets/serverhub-compact.png
-actionText: 快速上手 →
+actionText: 快速上手
 actionLink: /zh/tutorial/
 features:
 - title: 

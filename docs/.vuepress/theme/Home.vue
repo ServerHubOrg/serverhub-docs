@@ -44,6 +44,23 @@ export default {
 
 <style lang="stylus">
 @import './styles/config.styl'
+header
+  a.nav-link
+    color #757575
+    &:hover
+      color #424242
+  a.dropdown-title 
+    color #757575
+    &:hover
+      color #424242
+  .dropdown-wrapper .nav-dropdown .dropdown-item a
+    color #757575
+    &:hover
+      color #424242
+  a.repo-link 
+    color #757575
+    &:hover
+      color #424242
 
 .home
   padding $navbarHeight 2rem 0
@@ -57,6 +74,7 @@ export default {
       margin 3rem auto 1.5rem
     h1
       font-size 3rem
+      display none
     h1, .description, .action
       margin 1.8rem auto
     .description
@@ -66,16 +84,22 @@ export default {
       color lighten($textColor, 40%)
     .action-button
       display inline-block
-      font-size 1.2rem
+      font-size 1.15rem
+      // font-size 1.2rem
       color #fff
       background-color $accentColor
-      padding 0.8rem 1.6rem
+      padding 0.3rem 1rem
+      text-transform uppercase
+      // padding 0.8rem 1.6rem
       border-radius 4px
       transition background-color .1s ease
       box-sizing border-box
       border-bottom 1px solid darken($accentColor, 10%)
+      box-shadow 0 2px 6px 0 rgba(0,0,0,.3)
+      transition box-shadow ease-in-out 200ms
       &:hover
         background-color lighten($accentColor, 10%)
+        box-shadow 0 9px 20px 1px rgba(0,0,0,.1)
   .features
     border-top 1px solid $borderColor
     padding 1.2rem 0
@@ -97,8 +121,10 @@ export default {
       color lighten($textColor, 10%)
     p
       color lighten($textColor, 25%)
+      text-align center
   .footer
-    padding 2.5rem
+    padding 1.75rem
+    font-size .85rem
     border-top 1px solid $borderColor
     text-align center
     color lighten($textColor, 25%)
@@ -127,7 +153,7 @@ export default {
         font-size 1.2rem
       .action-button
         font-size 1rem
-        padding 0.6rem 1.2rem
+        padding 0.3rem 1rem
     .feature
       h2
         font-size 1.25rem

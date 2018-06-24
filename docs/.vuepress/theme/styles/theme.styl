@@ -29,7 +29,13 @@ body
   height $navbarHeight
   background-color #fff
   box-sizing border-box
-  border-bottom 1px solid $borderColor
+  // border-bottom 1px solid $borderColor
+@keyframes opacity-show
+  0%
+    opacity 0
+  100%
+    opacity 1
+    
 
 .sidebar-mask
   position fixed
@@ -38,6 +44,8 @@ body
   left 0
   width 100vw
   height 100vh
+  background-color rgba(0,0,0,.4)
+  animation opacity-show ease-in-out 1 forwards 200ms
   display none
 
 .sidebar
@@ -139,7 +147,7 @@ a.header-anchor
     text-decoration none
 
 code, kbd, .line-number
-  font-family source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
+  font-family "Roboto Mono", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace
 
 p, ul, ol
   line-height 1.7

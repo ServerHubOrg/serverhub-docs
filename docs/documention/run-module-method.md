@@ -1,8 +1,4 @@
----
-sidebarDepth: 3
----
-
-# Run MODULE METHOD
+# Run() Module Method
 
 ## ServerHub.Run()
 

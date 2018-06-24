@@ -71,20 +71,20 @@ Controller 文件就是平常却又特殊的 JavaScript 文件。你必须在文
 
 在以后的章节中会详细介绍这些变量的使用方法（ 控制器作用域变量），不过一些返回基本值（比如 `string`、 `number` 等等的就不会被包括在内了（还有一些为 Node.js 原生对象的别名也不会赘述）。
 
-* this.View Function() 返回由 model/ 目录下文件定义的 model 对象。
-* this.Runtime Object 提供许多运行时对象和属性
-  1.  this.Runtime.DBProvider Object 对 database provider 对象的引用（默认使用 MySQL，但可以在配置文件中修改）。
-  2.  this.Runtime.FileHelper Object 对 FileHelper 对象的引用，它提供了一些访问文件系统的便捷方法，区别于 Node.js 的 fs 和 path 模块。
-  3.  this.Runtime.WAIT boolean 控制 ServerHub 等待异步操作完成。
-* this.System Object 提供对 ServerHub 内部一些常量的访问性
-  1.  this.System.Version string ServerHub 版本号
-  2.  this.System.NodeVersion string Node.js 版本号
-  3.  this.System.Platform string 操作系统的平台信息（如 win32, linux 等等）
-  4.  this.System.Hardware Object 操作系统的硬件相关信息
-      * this.System.Hardware.TotalMemory number 已安装内存（单位 byte）
-      * this.System.Hardware.FreeMemory number 空闲内存（单位 byte）
-      * this.System.Hardware.NetworkInterfaces Object 返回本机所有已经注册了 IP 地址的网络接口信息
-  5.  this.System.Die Function(exit_code) 强行终结 ServerHub 实例
+* `View()` **_Function_** 返回由 model/ 目录下文件定义的 model 对象。
+* `Runtime` **_Object_** 提供许多运行时对象和属性
+  1.  `Runtime.DBProvider` **_Object_** 对 database provider 对象的引用（默认使用 MySQL，但可以在配置文件中修改）。
+  2.  `Runtime.FileHelper` **_Object_** 对 FileHelper 对象的引用，它提供了一些访问文件系统的便捷方法，区别于 Node.js 的 fs 和 path 模块。
+  3.  `Runtime.WAIT` **_boolean_** 控制 ServerHub 等待异步操作完成。
+* `System` **_Object_** 提供对 ServerHub 内部一些常量的访问性
+  1.  `System.Version` **_string_** ServerHub 版本号
+  2.  `System.NodeVersion` **_string_** Node.js 版本号
+  3.  `System.Platform` **_string_** 操作系统的平台信息（如 win32, linux 等等）
+  4.  `System.Hardware` **_Object_** 操作系统的硬件相关信息
+      * `System.Hardware.TotalMemory` **_number_** 已安装内存（单位 byte）
+      * `System.Hardware.FreeMemory` **_number_** 空闲内存（单位 byte）
+      * `System.Hardware.NetworkInterfaces` **_Object_** 返回本机所有已经注册了 IP 地址的网络接口信息
+  5.  `System.Die(exit_code)` **_Function_** 强行终结 ServerHub 实例
 
 ## 关于 controller 中的 action 方法
 
@@ -122,7 +122,9 @@ Action 方法名必须是小写的字符组成。你可以使用字母“a”到
 
 ## 关于 controller 特殊的语法
 
-### Old-fashioned way and DEPRECATED since `v1.0.3`
+::: warning 警告
+自 `v1.0.3` 之后就不再推荐此写法了，并且在将来的某个版本中，将会全面禁止使用此语法。
+:::
 
 ~~前面我们说过，如果你用了 lint 工具，那么 ServerHub 的 controller 文件将会引起一些语法错误。可能它会提示“ 在函数外使用了 return 语句”。不过其实你所写的是正确的、合法的 部分 JavaScript 文件。~~
 
