@@ -21,3 +21,5 @@ touch docs/<nav-name>/<sidebar-name>
 ```bash
 sh deploy.sh
 ```
+
+If you want to experience auto install, use github-build-hook.
