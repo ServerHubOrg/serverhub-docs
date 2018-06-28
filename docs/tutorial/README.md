@@ -10,19 +10,8 @@ based on release 1.3.1
 * Stable and Reliable
 * Extendable and Open Source
 
-Recently, we opened access for our official newsletter, you can [subscribe](mailto:serverhub.contact@gmail.com?subject=serverhub-news-52b3f7de&body=hello,%20ServerHub!) with you email. It may took up to 5 minutes before your mail address is recorded in our subscriber list.
+## What can ServerHub do?
 
----
+Currently, ServerHub support custom routing, view binding and controller registering.
 
-# Thanks
-
-And I'd like to say "thanks" to these people, who inspired, encouraged me.
-
-* [Wayne Wang](https://github.com/WayneMark) (brother)
-* [Yibang Gong](https://github.com/zjgyb) (NCEPU)
-* [Luke Cheng](https://github.com/chenglu) (Google)
-* Wangzhe Xu
-
-Then of course, all my families. Thank you for supporting my dream.
-
-Last, special thanks to my beloved Changrui Yang.
+And with latest updates, ServerResponse parameter in actions has been replaced with a wrapper SHResponse. Database support has been added to ServerHub. You can use controller scope variables and several new features. Detailed update could be found on CHANGELOG.md in the project repository.

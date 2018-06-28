@@ -12,17 +12,8 @@
 * 稳定可靠
 * 开源并且可拓展
 
-现在，我们开通了邮件订阅服务，你可以用自己的电子邮箱地址来 [订阅](mailto:serverhub.contact@gmail.com?subject=serverhub-news-52b3f7de&body=hello,%20ServerHub!) 本服务。订阅过程至多需要 5 分钟来完成。
+## ServerHub 能做什么？
 
-# 感谢
+简单来讲，ServerHub 会根据你的配置（或是一些默认配置）来帮助你处理 HTTP 请求，返回适当的响应，可以根据你的路由规则来匹配控制器和触发相应的操作函数。并且，ServerHub 提供了数据库支持（目前支持 MySQL），让你可以通过非常简单的配置，完成数据库连接、查询等操作.ServerHub 的目标是让动态网站架设更加简单，也更加轻便。根据当前的设计，你使用 serverhub-cli 工具创建的 demo 目录可以进行路由配置，视图和模型绑定，以及控制器的注册操作。
 
-在此，我向以下诸位表示衷心的感谢，是你们给了我很多灵感，同时激励我克服困难不断向前。
-
-* [渊哥](https://github.com/WayneMark) (俺弟)
-* [邦邦](https://github.com/zjgyb) (学弟)
-* [路哥](https://github.com/chenglu) (Google)
-* 哲弟
-
-当然，我还要感谢我的家人，感谢你们一路支持我的梦想。
-
-最后，向我的挚友 **昌睿** 致以一份特殊的谢意。
+在最新的更新当中，ServerHub 将 Node.js 原生的 ServerResponse 对象进行了一定的封装，这样你在 Action 方法中能够更加轻松处理数据（ServerHub 尽力保持与 Node.js 原生的最大兼容，但是你在使用前仍然需要充分阅读相关文档）。另一方面，ServerHub 为控制器提供了控制器作用域变量，让开发者访问系统参数和调用模块更加轻松了。关于这些更新的详细信息，建议阅读 master 分支的 CHANGELOG.md 说明。

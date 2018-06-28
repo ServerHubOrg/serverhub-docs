@@ -99,7 +99,7 @@ And this is how ServerHub route works. It defaultly dispatchs the "index" action
 
 Now we've gone through the whole example of ServerHub helloworld. Have you learnt how to build a simple server-side app with ServerHub?
 
-For more guides and documents, visit [doc page](/documention/).
+For more guides and documents, visit [doc page](/document/).
 
 ## Contributions of This Chapter
 

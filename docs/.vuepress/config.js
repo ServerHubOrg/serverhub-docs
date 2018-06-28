@@ -53,8 +53,8 @@ module.exports = {
           link: "/tutorial/"
         },
         {
-          text: "Documention",
-          link: "/documention/"
+          text: "Document",
+          link: "/document/"
         },
         {
           text: "About",
@@ -65,17 +65,18 @@ module.exports = {
           "/tutorial/": [{
             title: "Tutorial",
             collapsable: false,
-            children: ["", "hello-world", "getting-started", "Instance.Run()"]
+            children: ["", "hello-world", "getting-started","tls-tutorial"]
           }],
-          "/documention/": [{
-            title: "Documention",
+          "/document/": [{
+            title: "Document",
             collapsable: false,
             children: [
               "",
               "run-module-method",
               "controller",
               "route",
-              "plugin"
+              "plugin",
+              "database"
             ]
           }],
           "/about/": [{
@@ -97,7 +98,7 @@ module.exports = {
         },
         {
           text: "文档",
-          link: "/zh/documention/"
+          link: "/zh/document/"
         },
         {
           text: "关于",
@@ -108,9 +109,9 @@ module.exports = {
           "/zh/tutorial/": [{
             title: "教程",
             collapsable: false,
-            children: ["", "hello-world", "getting-started", "Instance.Run()"]
+            children: ["", "hello-world", "getting-started",'tls-tutorial']
           }],
-          "/zh/documention/": [{
+          "/zh/document/": [{
             title: "文档",
             collapsable: false,
             children: [

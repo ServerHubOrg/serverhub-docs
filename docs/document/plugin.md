@@ -1,4 +1,4 @@
-# Plugin System
+# Plugin
 
 ::: tip TIP
 avaliable since v1.0.0-beta

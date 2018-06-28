@@ -2,15 +2,15 @@
 
 ## ServerHub.Run()
 
-[view this](</tutorial/Instance.Run().html>)
+[View this](/tutorial/getting-started.html#usage). This chapter includes brief introduction of ServerHub instance Run() method.
 
-## Instance.Run()
+## Instance.Run() Configuration
 
-ConfigThe other day, I introduced `instance.Run()` method to you. And in this chapter, we will talk about the first parameter of `instance.Run()` method - the configuration object.
+The other day, I introduced `instance.Run()` method to you. And in this chapter, we will talk about the first parameter of `instance.Run()` method - the configuration object.
 
 ### As simple as possible
 
-Not like what we've seen in [Instance.Run()](</tutorial/Instance.Run().html>) chapter, the configuraton object is much too complicated. And in fact, there is only one property that is required: `BaseDir`.
+Not like what we've seen in [Usage](/tutorial/getting-started.html#usage) chapter, the configuraton object is much too complicated. And in fact, there is only one property that is required: `BaseDir`.
 
 `BaseDir` is the root path of server, which will be used during the whole life circle of your ServerHub application. If your current entry file, such as `app.js`, is just located in the directory that you want to use as server root. Then the value should be `__dirname`, which is a global variable of Node.js.
 
@@ -65,3 +65,5 @@ In `v0.0.96`, we introduced `this.Runtime.WAIT` signal to be the workaroud for s
 #### TLSOption `v1.0.6+`
 
 Since `v1.0.6`, ServerHub enhanced security with TLS/SSL. You may secure the connection with a `TLSOption` property. This property has four sub-properties: `Key: string, Cert: string, CA: string`x and `Port: Array<string>|Array<number>|number|string`. You need to load your private key and certificate files and assign their values to the properties above. And most importantly, you need to specify the port you want to secure.
+
+Here is a [tutorial](/tutorial/tls-tutorial.html) help you with TLS in ServerHub MVC.

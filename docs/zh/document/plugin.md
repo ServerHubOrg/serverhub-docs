@@ -49,6 +49,6 @@ module.exports = {
 ## 重要提示
 
 创建插件时，下面的内容一定要牢记于心
-::: warning Keep this in mind:
+::: warning 注意
 **永远不要在插件中试图修改传入 `main` 函数的参数中的 ServerResponse 对象！**
 :::

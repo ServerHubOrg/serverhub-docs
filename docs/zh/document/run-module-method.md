@@ -6,7 +6,7 @@ sidebarDepth: 3
 
 ## ServerHub.Run()
 
-[本节请查看这里](</zh/tutorial/Instance.Run().html>)
+[本节请查看这里](/zh/tutorial/getting-started.html#使用)
 
 ## Instance.Run() 参数配置
 
@@ -14,7 +14,7 @@ sidebarDepth: 3
 
 ### 越简单越好
 
-与之前我们在 [Instance.Run()](</zh/tutorial/Instance.Run().html>) 一章中看到的不同，那个配置对象太复杂了。事实上，只有一个参数是必要的，那就是： `BaseDir`.
+与之前我们在 [Instance.Run()](/zh/tutorial/getting-started.html#使用) 一章中看到的不同，那个配置对象太复杂了。事实上，只有一个参数是必要的，那就是： `BaseDir`.
 
 BaseDir 是 服务器的根目录，它会被 ServerHub 应用程序引用于其生命周期的各个阶段。如果你的入口文件，比如 app.js，刚好位于你的服务器根目录，则只需将 `__dirname` 传过去即可。
 
@@ -69,3 +69,5 @@ ServerHub 在处理默认页时引入了一个优先匹配和回滚策略。你�
 #### `TLSOption` `v1.0.6+`
 
 自 `v1.0.6` 开始，ServerHub 大大增强了连接安全性。你可以通过此属性来配置 TLS 证书。此属性由 4 个子属性构成： `Key: string、 Cert: string、 CA: string` 和 `Port: Array<string>|Array<number>|number|string`。你需要把私钥与证书载入并赋值给上述属性，然后把需要 TLS 连接的端口号指定给 Port 属性。
+
+这里有一则[教程](/zh/tutorial/tls-tutorial.html)帮助你使用 TLS。
