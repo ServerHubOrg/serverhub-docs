@@ -4,14 +4,13 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Playground",
-            "program": "${workspaceFolder}/playground/index.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch",
-            "program": "${workspaceFolder}/test/app.js"
+            "name": "Launch via NPM",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "build"
+            ],
+            "port": 9229
         }
     ]
 }

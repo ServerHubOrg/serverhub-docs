@@ -1,6 +1,7 @@
 module.exports = {
   base: "/", //deploy to serverhub-docs
   dest: "dist",
+  title: "ServerHub References",
   locales: {
     "/": {
       lang: "en-US",
@@ -76,7 +77,8 @@ module.exports = {
               "controller",
               "route",
               "plugin",
-              "database"
+              "database",
+              "archive"
             ]
           }],
           "/about/": [{
@@ -85,6 +87,11 @@ module.exports = {
             children: [
               "", 'contributors'
             ]
+          }],
+          "/archive":[{
+            title:'Archive',
+            collapsable:false,
+            children: ['','serverhub-mvc-1-3-0']
           }]
         }
       },
@@ -119,7 +126,8 @@ module.exports = {
               "run-module-method",
               "controller",
               "route",
-              "plugin"
+              "plugin",
+              "archive"
             ]
           }],
           "/zh/about/": [{
@@ -129,6 +137,11 @@ module.exports = {
               "",
               "contributors"
             ]
+          }],
+          "/zh/archive/":[{
+            title:'归档',
+            collapsable:false,
+            children: ['','serverhub-mvc-1-3-0']
           }]
         }
       }
