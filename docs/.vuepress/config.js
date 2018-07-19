@@ -78,6 +78,7 @@ module.exports = {
               "route",
               "plugin",
               "database",
+              "middleware",
               "archive"
             ]
           }],
@@ -127,6 +128,7 @@ module.exports = {
               "controller",
               "route",
               "plugin",
+              "middleware",
               "archive"
             ]
           }],
